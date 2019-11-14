@@ -7,7 +7,7 @@
  -->
 ##### 分支介绍：
 ```
-dev 脚手架分支
+master 脚手架分支
 dev_modules 模块分支
 dev_production 工程分支
 ```
