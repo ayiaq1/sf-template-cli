@@ -4,15 +4,14 @@ import store from './store';
 import { setLocale } from 'javascript@/i18n';
 import singleSpaVue from 'single-spa-vue';
 Vue.config.productionTip = false;
-// 自己修改id,每添加一个id需要在 html里面添加 <div id='xx'></div>
-const modulesName = 'app-xx';
+const moduleName = 'app-modules-modelDesign';
 const vueLifecycles = singleSpaVue({
     Vue,
     appOptions: {
-        el: `#${modulesName}`,
+        el: `#${moduleName}`,
         store,
         data: {
-            modulesName: modulesName
+            moduleName
         },
         i18n: setLocale(), // 国际化
         destroyed() {
@@ -22,7 +21,6 @@ const vueLifecycles = singleSpaVue({
         render: h => h(App)
     }
 });
-
 export const bootstrap = [vueLifecycles.bootstrap];
 export const mount = [vueLifecycles.mount];
 export const unmount = [vueLifecycles.unmount];
