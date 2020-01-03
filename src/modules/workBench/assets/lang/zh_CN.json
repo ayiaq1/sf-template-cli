@@ -1,0 +1,16 @@
+{
+    "data_access_task":"数据接入任务",
+    "data_deal_task":"数据处理任务",
+    "work_flow":"工作流",
+    "task_unit":"个",
+    "system_desc":"系统说明",
+    "help_center":"帮助中心",
+    "step1_title":"1. 数据接入",
+    "step1_desc":"通过数据接入任务快速将业务系统中的数据迁移至数据中心",
+    "step2_title":"2. 数据处理",
+    "step2_desc":"通过数据处理任务对数据进行灵活的加工转换形成规整数据",
+    "step3_title":"3. 工作流",
+    "step3_desc":"通过工作流用户可以编排复杂的工作流，支持多种类型的脚本开发",
+    "step4_title":"4. 运维中心",
+    "step4_desc":"通过运维中心监控各种类型任务的运行实例"
+}

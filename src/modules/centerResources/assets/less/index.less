@@ -1,0 +1,107 @@
+#app-modules-centerResources {
+    .cr-appLayout{
+        height: calc(100vh - 132px);
+    }
+    .cr-header{
+        height: 50px;
+        line-height: 50px;
+    }
+    .cr-container{
+        height: calc(100% - 70px);
+    }
+    .cr-leftSide{
+        .dataOrg_addBtn{
+            .addBtn_icon{
+                font-size: 22px;
+                color: @color-blue;
+                cursor: pointer;
+            }
+        }
+        .dataOrg_allBtn{
+            width: 100%;
+            margin: 5px 0;
+            // text-align: center;
+            // font-size: 16px;
+        }
+        .dataOrg_tree{
+            .dataOrg_node{
+                width: 100%;
+                position: relative;
+                .dataOrg_more{
+                    position: absolute;
+                    right: 4px;
+                    top: 4px;
+                    display: none;
+                }
+                &:hover{
+                    .dataOrg_more{
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    .cr-rightSide{
+        .attrInfo{
+            .attrInfo_form{
+                .el-form-item{
+                    margin-bottom: 0;
+                }
+            }
+            .attrInfo_viewBtn{
+                margin-top: 15px;
+                float: right;
+            }
+        }
+        .auditRecord{
+            .auditRecord_line {
+                margin: 15px 0;
+                color: @color-gray;
+            }
+        }
+    }
+}
+.cr-btnPopover{
+    min-width: 100px;
+    .btnPopover_item{
+        margin: 5px 0;
+        cursor: pointer;
+        .btnPopover_icon{
+            margin-right: 5px;
+        }
+    }
+}
+.cr-addPopover{
+    max-width: 300px;
+    .addPopover_item{
+        margin: 5px 0;
+        cursor: pointer;
+        .addPopover_icon{
+            margin-right: 5px;
+        }
+        .addPopover_info{
+            margin-left: 20px;
+            font-size: 12px;
+            color: @color-gray-level3;
+        }
+    }
+}
+.cr-selectSrc{
+    .selectSrc_tips{
+        color: @color-red;
+    }
+    .selectSrc_tabs{
+        // height: 450px;
+    }
+}
+.cr-srcTable{
+    .srcTable_leftList{
+    width: 47%;
+    margin-left: 0;
+}
+.srcTable_rightTable{
+    float: left;
+    width: 52%;
+    margin-left: 1%;
+}
+}

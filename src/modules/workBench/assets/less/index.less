@@ -1,0 +1,192 @@
+#app-modules-workBench {
+    .top-wrap {
+        padding: 20px;
+    }
+
+    // ================================= logo =====================================
+    .logo-wrap {
+        height: 115px;
+        min-width: 320px;
+        display: flex;
+        align-items: center;
+
+        .img-wrap {
+            width: 60px;
+            text-align: center;
+
+            &>img {
+                display: block;
+                width: 48px;
+                margin: 0 auto 5px auto;
+            }
+
+            &>.text {
+                display: block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+
+        .time-wrap {
+            width: 240px;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+    }
+
+    .card-wrap {
+        .el-card__header {
+
+            padding: 0 20px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #e5eaee;
+
+            &>.header-text {
+                color: @user-dialog-hd;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+
+
+    // ======================== 头部右边的任务列表 ==============================
+    .task-wrap {
+
+        .link-wrap {
+            display: none;
+            background-color: fade(@text-color-four, 20%);
+            border-radius: 5px;
+            position: absolute;
+            top: 0;
+            right: 10px;
+            bottom: 0;
+            left: 10px;
+
+            &::before {
+                content: '';
+                width: 52px;
+                height: 52px;
+                margin: -20px 0 0 -22px;
+                background: url(/images/modules/home/btn.png) no-repeat center center;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+            }
+        }
+
+        [class*=el-col-] {
+            position: relative;
+
+            &:hover {
+                .link-wrap {
+                    display: block;
+                }
+            }
+        }
+
+        .box-card {
+            height: 115px;
+            overflow: hidden;
+
+            & .el-card__header {
+                padding: 0;
+            }
+
+            .header-wrap {
+                height: 50px;
+                line-height: 50px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+            }
+
+            .icon-wrap {
+                display: inline-block;
+                height: 32px;
+                width: 32px;
+                background: #e7f0f9;
+                border-radius: 50%;
+                padding: 5px;
+                margin: 8px 8px 8px -5%;
+
+                &>i {
+
+                    display: block;
+                    height: 100%;
+                    border-radius: 50%;
+                    line-height: 22px;
+                    text-align: center;
+                    color: @color-white;
+                    font-size: 16px;
+                }
+            }
+
+            .title-wrap {
+                display: inline-block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding-left: 0;
+                font-size: 14px;
+            }
+
+            .bottom-wrap {
+                text-align: center;
+                font-size: 16px;
+            }
+
+        }
+    }
+
+
+    // ========================= 系统说明 ===========================
+    .system-wrap {
+        .steps-wrap {
+            &>.el-steps {
+                min-height: 200px;
+                height: calc(100vh - 400px);
+                align-items: center;
+            }
+
+            .el-step__head.is-finish {
+                border-color: fade(#409EFF, 50%);
+            }
+
+            .el-step.is-horizontal .el-step__line {
+                top: 50%
+            }
+
+            .el-step__icon {
+                width: 80px;
+                line-height: 80px;
+                height: 80px;
+                font-size: 42px;
+            }
+        }
+    }
+
+
+    // ======================== 帮助说明 ===========================
+
+    .help-wrap {
+        .help-list-wrap {
+            min-height: 200px;
+            height: calc(100vh - 400px);
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            &>li {
+                height: 32px;
+                line-height: 32px;
+                padding: 0 15px;
+
+                &:nth-of-type(2n+2) {
+                    background-color: fade(@text-color-four, 20%)
+                }
+            }
+        }
+    }
+}

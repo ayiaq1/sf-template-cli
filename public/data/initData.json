@@ -1,0 +1,575 @@
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "currServerDate": 1576481941000,
+        "userId": "1",
+        "area": "四川省",
+        "name": "admin",
+        "perms": [],
+        "menus": [
+            {
+                "children": [
+                    {
+                        "menuCode": "GLOBAL-",
+                        "name": "全局配置"
+                    },
+                    {
+                        "menuCode": "GZT-",
+                        "name": "工作台",
+                        "icon": "",
+                        "id": "1",
+                        "parentId": "-1",
+                        "url": "#/workBench"
+                    },
+                    {
+                        "menuCode": "BZGL-",
+                        "name": "标准管理",
+                        "icon": "",
+                        "id": "2",
+                        "parentId": "-1",
+                        "children": [
+                            {
+                                "menuCode": "BZGL-BDBZ",
+                                "name": "本地标准",
+                                "icon": "",
+                                "id": "20",
+                                "parentId": "2",
+                                "children": [
+                                    {
+                                        "menuCode": "BZGL-BDBZ-JCBZ",
+                                        "name": "基础标准",
+                                        "icon": "",
+                                        "id": "200",
+                                        "parentId": "20",
+                                        "children": [
+                                            {
+                                                "menuCode": "BZGL-BDBZ-JCBZ-SJY",
+                                                "name": "数据元",
+                                                "icon": "",
+                                                "id": "2000",
+                                                "parentId": "200",
+                                                "url": "#/localDataElement"
+                                            },
+                                            {
+                                                "menuCode": "BZGL-BDBZ-JCBZ-DMJ",
+                                                "name": "代码集",
+                                                "icon": "",
+                                                "id": "2001",
+                                                "parentId": "200",
+                                                "url": "#/localCodeSet"
+                                            },
+                                            {
+                                                "menuCode": "BZGL-BDBZ-JCBZ-BMJ",
+                                                "name": "编码集",
+                                                "icon": "",
+                                                "id": "2002",
+                                                "parentId": "200",
+                                                "url": "#/localCodingSet"
+                                            },
+                                            {
+                                                "menuCode": "BZGL-BDBZ-JCBZ-TYC",
+                                                "name": "同义词",
+                                                "icon": "",
+                                                "id": "2003",
+                                                "parentId": "200",
+                                                "url": "#/localSynonyms"
+                                            },
+                                            {
+                                                "menuCode": "BZGL-BDBZ-JCBZ-XDC",
+                                                "name": "限定词",
+                                                "icon": "",
+                                                "id": "2004",
+                                                "parentId": "200",
+                                                "url": "#/localQualifiers"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "menuCode": "BZGL-BDBZ-ZBBZ",
+                                        "name": "指标标准",
+                                        "icon": "",
+                                        "id": "300",
+                                        "parentId": "20",
+                                        "children": [
+                                            {
+                                                "menuCode": "BZGL-BDBZ-ZBBZ-ZB",
+                                                "name": "指标",
+                                                "icon": "",
+                                                "id": "3000",
+                                                "parentId": "300",
+                                                "url": "#/localNorm"
+                                            },
+                                            {
+                                                "menuCode": "BZGL-BDBZ-ZBBZ-WD",
+                                                "name": "维度",
+                                                "icon": "",
+                                                "id": "3001",
+                                                "parentId": "300",
+                                                "url": "#/localDimension"
+                                            },
+                                            {
+                                                "menuCode": "BZGL-BDBZ-ZBBZ-DL",
+                                                "name": "度量",
+                                                "icon": "",
+                                                "id": "3002",
+                                                "parentId": "300",
+                                                "url": "#/localMeasure"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "menuCode": "BZGL-BDBZ-QTBZ",
+                                        "name": "其他标准",
+                                        "icon": "",
+                                        "id": "400",
+                                        "parentId": "20",
+                                        "children": [
+                                            {
+                                                "menuCode": "BZGL-BDBZ-QTBZ-BZWJ",
+                                                "name": "标准文件",
+                                                "icon": "",
+                                                "id": "4000",
+                                                "parentId": "300",
+                                                "url": "#/localStandardDocument"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "menuCode": "BZGL-GJBZ",
+                                "name": "国家标准",
+                                "icon": "",
+                                "id": "21",
+                                "parentId": "2",
+                                "children": [
+                                    {
+                                        "menuCode": "BZGL-GJBZ-JCBZ-SJY",
+                                        "name": "数据元",
+                                        "icon": "",
+                                        "id": "2100",
+                                        "parentId": "21",
+                                        "url": "#/countryDataElement"
+                                    },
+                                    {
+                                        "menuCode": "BZGL-GJBZ-JCBZ-DMJ",
+                                        "name": "代码集",
+                                        "icon": "",
+                                        "id": "2101",
+                                        "parentId": "21",
+                                        "url": "#/countryCodeSet"
+                                    },
+                                    {
+                                        "menuCode": "BZGL-GJBZ-JCBZ-BMJ",
+                                        "name": "编码集",
+                                        "icon": "",
+                                        "id": "2102",
+                                        "parentId": "21",
+                                        "url": "#/countryCodingSet"
+                                    }
+                                ]
+                            },
+                            {
+                                "menuCode": "BZGL-HYBZ",
+                                "name": "行业标准",
+                                "icon": "",
+                                "id": "22",
+                                "parentId": "2",
+                                "children": [
+                                    {
+                                        "menuCode": "BZGL-HYBZ-JCBZ-SJY",
+                                        "name": "数据元",
+                                        "icon": "",
+                                        "id": "2200",
+                                        "parentId": "22",
+                                        "url": "#/industryDataElement"
+                                    },
+                                    {
+                                        "menuCode": "BZGL-HYBZ-JCBZ-DMJ",
+                                        "name": "代码集",
+                                        "icon": "",
+                                        "id": "2201",
+                                        "parentId": "22",
+                                        "url": "#/industryCodeSet"
+                                    },
+                                    {
+                                        "menuCode": "BZGL-HYBZ-JCBZ-BMJ",
+                                        "name": "编码集",
+                                        "icon": "",
+                                        "id": "2202",
+                                        "parentId": "22",
+                                        "url": "#/industryCodingSet"
+                                    }
+                                ]
+                            },
+                            {
+                                "menuCode": "BZGL-DFBZ",
+                                "name": "地方标准",
+                                "icon": "",
+                                "id": "23",
+                                "parentId": "2",
+                                "children": [
+                                    {
+                                        "menuCode": "BZGL-DFBZ-JCBZ-SJY",
+                                        "name": "数据元",
+                                        "icon": "",
+                                        "id": "2300",
+                                        "parentId": "23",
+                                        "url": "#/placeDataElement"
+                                    },
+                                    {
+                                        "menuCode": "BZGL-DFBZ-JCBZ-DMJ",
+                                        "name": "代码集",
+                                        "icon": "",
+                                        "id": "2301",
+                                        "parentId": "23",
+                                        "url": "#/placeCodeSet"
+                                    },
+                                    {
+                                        "menuCode": "BZGL-DFBZ-JCBZ-BMJ",
+                                        "name": "编码集",
+                                        "icon": "",
+                                        "id": "2302",
+                                        "parentId": "23",
+                                        "url": "#/placeCodingSet"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "menuCode": "YSJ-",
+                        "name": "元数据管理",
+                        "icon": "",
+                        "id": "3",
+                        "parentId": "-1",
+                        "children": [
+                            {
+                                "menuCode": "YSJ-CJ",
+                                "name": "元数据采集",
+                                "icon": "",
+                                "id": "30",
+                                "parentId": "3",
+                                "url": "#/metadataCollection"
+                            },
+                            {
+                                "menuCode": "YSJ-WH",
+                                "name": "元数据维护",
+                                "icon": "",
+                                "id": "31",
+                                "parentId": "3",
+                                "url": "#/metadataMaintenance"
+                            },
+                            {
+                                "menuCode": "YSJ-JH",
+                                "name": "元数据稽核",
+                                "icon": "",
+                                "id": "32",
+                                "parentId": "3",
+                                "children": [
+                                    {
+                                        "menuCode": "YSJ-JH-JHSJ",
+                                        "name": "稽核设计",
+                                        "icon": "",
+                                        "id": "321",
+                                        "parentId": "32",
+                                        "url": "#/auditDesign"
+                                    },{
+                                        "menuCode": "YSJ-JH-JHJG",
+                                        "name": "稽核结果",
+                                        "icon": "",
+                                        "id": "322",
+                                        "parentId": "32",
+                                        "url": "#/auditResults"
+                                    }
+                                ]
+                            },
+                            {
+                                "menuCode": "YSJ-DB",
+                                "name": "元数据定版",
+                                "icon": "",
+                                "id": "33",
+                                "parentId": "3",
+                                "url": "#/metadataFinalization"
+                            },
+                            {
+                                "menuCode": "YSJ-TJ",
+                                "name": "元数据统计",
+                                "icon": "",
+                                "id": "34",
+                                "parentId": "3",
+                                "url": "#/metadataStatistics"
+                            },
+                            {
+                                "menuCode": "YSJ-FX",
+                                "name": "元数据分析",
+                                "icon": "",
+                                "id": "35",
+                                "parentId": "3",
+                                "children": [
+                                    {
+                                        "menuCode": "YSJ-FX-DT",
+                                        "name": "元数据地图",
+                                        "icon": "",
+                                        "id": "351",
+                                        "parentId": "35",
+                                        "url": "#/metadataMap"
+                                    },{
+                                        "menuCode": "YSJ-FX-ZYDFX",
+                                        "name": "重要程度分析",
+                                        "icon": "",
+                                        "id": "352",
+                                        "parentId": "35",
+                                        "url": "#/metadataAnalysis"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "menuCode": "JRZY-",
+                        "name": "接入资源",
+                        "icon": "",
+                        "id": "4",
+                        "parentId": "-1",
+                        "url": "#/accessResources"
+                    },
+                    {
+                        "menuCode": "MXGL-",
+                        "name": "模型管理",
+                        "icon": "",
+                        "id": "5",
+                        "parentId": "-1",
+                        "children": [
+                            {
+                                "menuCode": "MXGL-ZXZY",
+                                "name": "中心资源",
+                                "icon": "",
+                                "id": "50",
+                                "parentId": "5",
+                                "url": "#/centerResources"
+                            },
+                            {
+                                "menuCode": "MXGL-MXSJ",
+                                "name": "模型设计",
+                                "icon": "",
+                                "id": "51",
+                                "parentId": "5",
+                                "url": "#/modelDesign"
+                            }
+                        ]
+                    },
+                    {
+                        "menuCode": "ZLGL-",
+                        "name": "质量管理",
+                        "icon": "",
+                        "id": "6",
+                        "parentId": "-1",
+                        "children": [
+                            {
+                                "menuCode": "ZLGL-ZLKF",
+                                "name": "质量开发",
+                                "icon": "",
+                                "id": "60",
+                                "parentId": "6",
+                                "url": "#/qualityDevelopment"
+                            },
+                            {
+                                "menuCode": "ZLGL-DD",
+                                "name": "质量调度",
+                                "icon": "",
+                                "id": "61",
+                                "parentId": "6",
+                                "url": "#/qualityScheduling"
+                            },
+                            {
+                                "menuCode": "ZLGL-MX",
+                                "name": "问题明细",
+                                "icon": "",
+                                "id": "62",
+                                "parentId": "6",
+                                "url": "#/qualityDetails"
+                            },
+                            {
+                                "menuCode": "ZLGL-ZLBG",
+                                "name": "质量报告",
+                                "icon": "",
+                                "id": "63",
+                                "parentId": "6",
+                                "url": "#/qualityReport"
+                            }
+                        ]
+                    },
+                    {
+                        "menuCode": "ZCGL-",
+                        "name": "资产管理",
+                        "icon": "",
+                        "id": "7",
+                        "parentId": "-1",
+                        "children": [
+                            {
+                                "menuCode": "ZCGL-SMZQGL",
+                                "name": "生命周期管理",
+                                "icon": "",
+                                "id": "70",
+                                "parentId": "7",
+                                "url": "#/lifeCycleManagement"
+                            },
+                            {
+                                "menuCode": "ZLGL-ZSJWH",
+                                "name": "主数据维护",
+                                "icon": "",
+                                "id": "71",
+                                "parentId": "7",
+                                "url": "#/masterDataMaintenance"
+                            },
+                            {
+                                "menuCode": "ZLGL-ZCML",
+                                "name": "资产目录",
+                                "icon": "",
+                                "id": "72",
+                                "parentId": "7",
+                                "url": "#/assetCatalog"
+                            },
+                            {
+                                "menuCode": "ZLGL-SJCX",
+                                "name": "数据查询",
+                                "icon": "",
+                                "id": "73",
+                                "parentId": "7",
+                                "url": "#/dataQuery"
+                            },
+                            {
+                                "menuCode": "ZLGL-WP",
+                                "name": "网盘",
+                                "icon": "",
+                                "id": "74",
+                                "parentId": "7",
+                                "url": "#/netdisc"
+                            }
+                        ]
+                    },
+                    {
+                        "menuCode": "DBZX-",
+                        "name": "代办中心",
+                        "icon": "",
+                        "id": "8",
+                        "parentId": "-1",
+                        "url": "#/agencyCenter"
+                    },
+                    {
+                        "menuCode": "FWGL-",
+                        "name": "服务管理",
+                        "icon": "",
+                        "id": "9",
+                        "parentId": "-1",
+                        "children": [
+                            {
+                                "menuCode": "FWGL-FWFB",
+                                "name": "服务发布",
+                                "icon": "",
+                                "id": "90",
+                                "parentId": "9",
+                                "url": "#/serviceRelease"
+                            },
+                            {
+                                "menuCode": "FWGL-FWJK",
+                                "name": "服务监控",
+                                "icon": "",
+                                "id": "91",
+                                "parentId": "9",
+                                "url": "#/serviceMonitoring"
+                            },
+                            {
+                                "menuCode": "FWGL-HMDGL",
+                                "name": "黑名单管理",
+                                "icon": "",
+                                "id": "92",
+                                "parentId": "9",
+                                "url": "#/blacklistManagement"
+                            }
+                        ]
+                    },
+                    {
+                        "menuCode": "XTGL-",
+                        "name": "系统管理",
+                        "icon": "",
+                        "id": "10",
+                        "parentId": "-1",
+                        "children": [
+                            {
+                                "menuCode": "XTGL-YMX",
+                                "name": "元模型",
+                                "icon": "",
+                                "id": "100",
+                                "parentId": "10",
+                                "url": "#/metaModel"
+                            },
+                            {
+                                "menuCode": "XTGL-SJYPZ",
+                                "name": "数据源配置",
+                                "icon": "",
+                                "id": "101",
+                                "parentId": "10",
+                                "url": "#/dataSourceConfig"
+                            },
+                            {
+                                "menuCode": "XTGL-ZLPGMX",
+                                "name": "质量评估模型",
+                                "icon": "",
+                                "id": "102",
+                                "parentId": "10",
+                                "url": "#/qualityAssessmentModel"
+                            },
+                            {
+                                "menuCode": "XTGL-SHLCPZ",
+                                "name": "审核流程配置",
+                                "icon": "",
+                                "id": "103",
+                                "parentId": "10",
+                                "url": "#/auditConfig"
+                            },
+                            {
+                                "menuCode": "XTGL-SJFJFL",
+                                "name": "数据分级分类",
+                                "icon": "",
+                                "id": "104",
+                                "parentId": "10",
+                                "url": "#/dataClassification"
+                            },
+                            {
+                                "menuCode": "XTGL-MKSJQX",
+                                "name": "模块数据权限",
+                                "icon": "",
+                                "id": "105",
+                                "parentId": "10",
+                                "url": "#/moduleDataPermissions"
+                            },
+                            {
+                                "menuCode": "XTGL-XTRZ",
+                                "name": "系统日志",
+                                "icon": "",
+                                "id": "106",
+                                "parentId": "10",
+                                "url": "#/systemLog"
+                            },
+                            {
+                                "menuCode": "XTGL-MBGL",
+                                "name": "码表管理",
+                                "icon": "",
+                                "id": "107",
+                                "parentId": "10",
+                                "url": "#/codeTableManagement"
+                            }
+                        ]
+                    }
+                ],
+                "menuCode": "Govern-",
+                "name": "Govern-数据治理平台",
+                "id": "1",
+                "parentId": "-1"
+            }
+        ]
+    }
+}

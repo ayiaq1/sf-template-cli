@@ -1,0 +1,19 @@
+{
+    "serial": "序号",
+    "resourceList": {
+        "table": {
+            "resourceName": "资源名称",
+            "resourceClassification": "资源分类",
+            "useClassification": "用途分类",
+            "itemNumber": "数据项个数",
+            "effectiveState": "有效性状态",
+            "auditStatus": "最新审核状态"
+        },
+        "operation": {
+            "edit": "编辑",
+            "verify": "送审",
+            "preview": "预览",
+            "delete": "删除"
+        }
+    }
+}

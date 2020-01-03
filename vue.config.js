@@ -3,17 +3,20 @@
  * @Author: dawdler
  * @LastModifiedBy: dawdler
  * @Date: 2019-01-30 16:02:54
- * @LastEditTime: 2019-11-05 14:34:51
+ * @LastEditTime: 2019-12-24 14:06:39
  */
 const path = require('path');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const isProduction = process.env.NODE_ENV === 'production';
 // 计算路径
 const resolve = function (dir) {
     return path.join(__dirname, '..', dir);
 };
+const resolveLoc = function (dir) {
+    return path.join(__dirname, '.', dir);
+};
+const GOVERN_HOST = process.env.VUE_APP_GOVERN_HOST;
 console.log('--------------do-------------');
 // ===== vue-li3配置
 module.exports = {
@@ -27,24 +30,57 @@ module.exports = {
             .set('javascript@', resolve('../javascript/'))
             .set('modules@', resolve('../modules/'))
             .set('components@', resolve('../components/'))
+            .set('localJs@', resolveLoc('./src/javascript/'))
+            .set('localModules@', resolveLoc('./src/modules/'))
+            .set('localComponents@', resolveLoc('./src/components/'));
+        config
+            .when(isProduction,
+                config => {
+                    config
+                        .plugin('ScriptExtHtmlWebpackPlugin')
+                        .after('html')
+                        .use('script-ext-html-webpack-plugin', [{
+                            // `runtime` must same as runtimeChunk name. default is `runtime`
+                            inline: /runtime\..*\.js$/
+                        }])
+                        .end();
+                    config
+                        .optimization.splitChunks({
+                            chunks: 'all',
+                            cacheGroups: {
+                                libs: {
+                                    name: 'chunk-libs',
+                                    test: /[\\/]node_modules[\\/]/,
+                                    priority: 10,
+                                    chunks: 'initial' // only package third parties that are initially dependent
+                                },
+                                elementUI: {
+                                    name: 'chunk-elementUI', // split elementUI into a single package
+                                    priority: 20, // the weight needs to be larger than libs and app or it will be packaged into libs or app
+                                    test: /[\\/]node_modules[\\/]_?element-ui(.*)/ // in order to adapt to cnpm
+                                },
+                                antv: {
+                                    name: 'chunk-antv', // split elementUI into a single package
+                                    priority: 20, // the weight needs to be larger than libs and app or it will be packaged into libs or app
+                                    test: /[\\/]node_modules[\\/]_?@antv(.*)/ // in order to adapt to cnpm
+                                },
+                                commons: {
+                                    name: 'chunk-commons',
+                                    test: resolve('../components/'), // can customize your rules
+                                    minChunks: 3, //  minimum common number
+                                    priority: 5,
+                                    reuseExistingChunk: true
+                                }
+                            }
+                        });
+                    config.optimization.runtimeChunk('single');
+                });
     },
     configureWebpack: config => {
+        config.externals = {
+            vuex: 'Vuex'
+        };
         if (isProduction) {
-            config.plugins.push(
-                new UglifyJsPlugin({
-                    uglifyOptions: {
-                        compress: {
-                            drop_debugger: true
-                        },
-                        mangle: false,
-                        output: {
-                            beautify: true // 压缩注释
-                        }
-                    },
-                    sourceMap: false,
-                    parallel: true
-                })
-            );
             config.plugins.push(
                 new OptimizeCSSAssetsPlugin({
                     assetNameRegExp: /\.css$/g,
@@ -80,18 +116,21 @@ module.exports = {
         // 开启 CSS source maps?
         sourceMap: true
     },
-    // use thread-loader for babel & TS in production build
     // webpack-dev-server 相关配置
     devServer: {
         open: true,
-        port: 9999,
+        port: 2222,
+        overlay: {
+            warnings: false,
+            errors: true
+        },
         proxy: {
-            '/scheduler': {
-                target: 'http://10.0.11.137:8889',
+            [GOVERN_HOST]: {
+                target: 'http://10.0.11.137:23456',
                 ws: false,
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/scheduler': '/scheduler' // 代理的路径
+                    ['^' + GOVERN_HOST]: [GOVERN_HOST]
                 }
             }
         }

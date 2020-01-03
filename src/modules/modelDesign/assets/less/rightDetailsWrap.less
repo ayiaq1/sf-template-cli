@@ -1,0 +1,43 @@
+#app-modules-modelDesign .right-details-wrap {
+    .sf-title-container {
+        height: 32px;
+        line-height: 32px;
+        padding: 0;
+        .clearfix;
+    }
+
+    .title-wrap {
+        float: left;
+    }
+
+    .ctrl-wrap {
+        float: right;
+
+        &>.sf-search-bar,
+        &>.el-button {
+            float: left;
+        }
+
+        &>.sf-search-bar {
+            min-width: 250px;
+            margin-right: 15px;
+        }
+    }
+
+    .table-change-wrap {
+        .el-select {
+            margin-left: 10px;
+            width: 100px;
+        }
+
+        .unit-wrap {
+            margin: 0 10px;
+
+            &>.num {
+                font-size: 18px;
+                margin: 0 5px;
+                color: @color-orange;
+            }
+        }
+    }
+}

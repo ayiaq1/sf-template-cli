@@ -3,8 +3,17 @@
  * @Author: dawdler
  * @Date: 2019-08-28 09:37:05
  * @LastModifiedBy: dawdler
- * @LastEditTime: 2019-11-05 15:01:56
+ * @LastEditTime: 2019-12-31 09:30:20
  */
+// 演示专用
+.sf-no-side-container {
+    &>img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
 /*-------------------------------------
  * 相关样式引用
 -------------------------------------*/
@@ -16,6 +25,152 @@
 @import '~less@/common/common';
 
 /*-------------------------------------
+ * 按功能分频道的一些频道级页面的样式，不要在这个里面写一些通用的样式
+-------------------------------------*/
+@import '~modules@/login/assets/less/index.less';
+@import '~modules@/breadCrumbs/assets/less/index.less';
+@import '~modules@/topMenu/assets/less/index.less';
+@import '~modules@/subMenu/assets/less/index.less';
+
+/*-------------------------------------
  * 项目私有模块的样式引入；
 -------------------------------------*/
-@import './modules/login/assets/less/index.less';
+// 工作台
+@import 'modules/workBench/assets/less/index.less';
+// ============= 标准管理 - 本地标准 ============
+// =============== 基础标准  ============
+// 基础标准 - 数据元
+@import 'modules/localDataElement/assets/less/index.less';
+// 基础标准 - 代码集
+@import 'modules/localCodeSet/assets/less/index.less';
+// 基础标准 - 编码集
+@import 'modules/localCodingSet/assets/less/index.less';
+// 基础标准 - 同义词
+@import 'modules/localSynonyms/assets/less/index.less';
+// 基础标准 - 限定词
+@import 'modules/localQualifiers/assets/less/index.less';
+// =============== 指标标准  ============
+// 指标标准 - 指标
+@import 'modules/localNorm/assets/less/index.less';
+// 指标标准 - 维度
+@import 'modules/localDimension/assets/less/index.less';
+// 指标标准 - 度量
+@import 'modules/localMeasure/assets/less/index.less';
+
+// =============== 其他标准  ============
+// 其他标准 - 标准文件
+@import 'modules/localStandardDocument/assets/less/index.less';
+// ============= 标准管理 - 本地标准 end ============
+
+// ============= 标准管理 - 国家标准 ============
+// 数据元
+@import 'modules/countryDataElement/assets/less/index.less';
+// 代码集
+@import 'modules/countryCodeSet/assets/less/index.less';
+// 编码集
+@import 'modules/countryCodingSet/assets/less/index.less';
+// ============= 标准管理 - 国家标准 end ============
+
+// ============= 标准管理 - 行业标准 ============
+// 数据元
+@import 'modules/industryDataElement/assets/less/index.less';
+// 代码集
+@import 'modules/industryCodeSet/assets/less/index.less';
+// 编码集
+@import 'modules/industryCodingSet/assets/less/index.less';
+// ============= 标准管理 - 行业标准 end ============
+
+// ============= 标准管理 - 地方标准 ============
+// 数据元
+@import 'modules/placeDataElement/assets/less/index.less';
+// 代码集
+@import 'modules/placeCodeSet/assets/less/index.less';
+// 编码集
+@import 'modules/placeCodingSet/assets/less/index.less';
+// ============= 标准管理 - 地方标准 end ============
+
+// ============= 元数据管理 ============
+// 元数据采集
+@import 'modules/metadataCollection/assets/less/index.less';
+// 元数据维护
+@import 'modules/metadataMaintenance/assets/less/index.less';
+// 元数据稽核 -- 稽核设计
+@import 'modules/auditDesign/assets/less/index.less';
+// 元数据稽核 -- 稽核结果
+@import 'modules/auditResults/assets/less/index.less';
+// 元数据定版
+@import 'modules/metadataFinalization/assets/less/index.less';
+// 元数据统计
+@import 'modules/metadataStatistics/assets/less/index.less';
+// 元数据分析 -- 元数据地图
+@import 'modules/metadataMap/assets/less/index.less';
+// 元数据分析 -- 重要程度分析
+@import 'modules/metadataAnalysis/assets/less/index.less';
+// ============= 元数据管理 end ============
+
+// ============= 接入资源 ============
+@import 'modules/accessResources/assets/less/index.less';
+// ============= 接入资源 end ============
+
+// ============= 模型管理 ============
+// 中心资源
+@import 'modules/centerResources/assets/less/index.less';
+// 模型设计
+@import 'modules/modelDesign/assets/less/index.less';
+// ============= 模型管理 end ============
+
+// ============= 质量管理 ============
+// 质量开发
+@import 'modules/qualityDevelopment/assets/less/index.less';
+// 质量调度
+@import 'modules/qualityScheduling/assets/less/index.less';
+// 问题明细
+@import 'modules/qualityDetails/assets/less/index.less';
+// 质量报告
+@import 'modules/qualityReport/assets/less/index.less';
+// ============= 质量管理 end ============
+
+// ============= 资产管理 ============
+// 生命周期管理
+@import 'modules/lifeCycleManagement/assets/less/index.less';
+// 主数据维护
+@import 'modules/masterDataMaintenance/assets/less/index.less';
+// 资产目录
+@import 'modules/assetCatalog/assets/less/index.less';
+// 数据查询
+@import 'modules/dataQuery/assets/less/index.less';
+// 网盘
+@import 'modules/netdisc/assets/less/index.less';
+// ============= 资产管理 end ============
+
+// ============= 代办中心 ============
+@import 'modules/agencyCenter/assets/less/index.less';
+// ============= 代办中心 end ============
+
+// ============= 服务管理 ============
+// 服务发布
+@import 'modules/serviceRelease/assets/less/index.less';
+// 服务监控
+@import 'modules/serviceMonitoring/assets/less/index.less';
+// 黑名单管理
+@import 'modules/blacklistManagement/assets/less/index.less';
+// ============= 服务管理 end ============
+
+// ============= 系统管理 ============
+// 元模型
+@import 'modules/metaModel/assets/less/index.less';
+// 数据源配置
+@import 'modules/dataSourceConfig/assets/less/index.less';
+// 质量评估模型
+@import 'modules/qualityAssessmentModel/assets/less/index.less';
+// 审核流程配置
+@import 'modules/auditConfig/assets/less/index.less';
+// 数据分级分类
+@import 'modules/dataClassification/assets/less/index.less';
+// 模块数据权限
+@import 'modules/moduleDataPermissions/assets/less/index.less';
+// 系统日志
+@import 'modules/systemLog/assets/less/index.less';
+// 码表管理
+@import 'modules/codeTableManagement/assets/less/index.less';
+// ============= 系统管理 end ============
